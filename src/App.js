@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Micomponente from './mi_componente';
 import {Button, Icon} from 'react-materialize'
+import Login from './componentes/login'
 
 class App extends Component {
 
@@ -15,7 +16,7 @@ constructor(props){
 }
 
   componentWillMount() {
-    fetch('')
+    fetch('http://tourmundial.cl/api/programas/1608')
       .then((response) => {
         return response.json()
       })
@@ -73,6 +74,10 @@ suma(){
       
           <button className="btn waves-effect waves-light" id="boton_prueba" name="PRUEBA" onClick={this.suma}>Press me</button>
           <Micomponente listado={this.state.empleados} estado_1={this.state.numero_1} fun_suma= {this.suma}/>
+          <br />
+          <br />
+
+          <Login/>
         </div> 
         </div>
       </div>
