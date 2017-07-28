@@ -1,0 +1,19 @@
+.transition{
+  transition: opacity 1.5s ease-in;  
+}
+
+.on {
+  opacity: 1;
+}
+
+.off {
+  opacity: 0.01;
+}
+
+
+#container{
+    width:138px;
+    height: 138px;
+    background-color:red;
+    border-radius: 50%;
+}

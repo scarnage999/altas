@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Micomponente from './mi_componente';
-import {Button, Icon} from 'react-materialize'
-import Login from './componentes/login'
+import {Button, Icon} from 'react-materialize';
+import Login from './componentes/login';
+import Game from './componentes/game';
+import AnimationExample from './componentes/animation';
+import keydown, { Keys } from 'react-keydown';
+
+
+
+
 
 class App extends Component {
 
@@ -14,6 +21,9 @@ constructor(props){
     this.suma = this.suma.bind(this)
     this.state = { empleados: [] }
 }
+
+
+    
 
   componentWillMount() {
     fetch('http://tourmundial.cl/api/programas/1608')
@@ -47,6 +57,8 @@ suma(){
  this.setState({numero_1: num +1})
 }
 
+
+
   render() {
 
     //console.log(this.state.numero_1)
@@ -78,6 +90,12 @@ suma(){
           <br />
 
           <Login/>
+          <Game/>
+          <br />
+          <br />
+          <AnimationExample />
+          <br />
+          <br />
         </div> 
         </div>
       </div>
